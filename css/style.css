@@ -1,0 +1,285 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+.logo {
+    width: 150px;
+    float: left;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+#hero {
+    background-image: url('../images/hero.jpg');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 150px 0;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+#slider {
+    margin: 20px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+#slider .slide {
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    animation: slide-animation 15s infinite;
+}
+
+@keyframes slide-animation {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    100% { left: 0%; }
+}
+
+#intro, #about, #contact, #menu, #services {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.btn {
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label, form input, form textarea, form button {
+    margin-bottom: 10px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 10px;
+    background-color: #f98f00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-item, .service-item {
+    margin-bottom: 20px;
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    header, .container, #hero, #intro, #about, #contact, #menu, #services, footer {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    nav ul {
+        text-align: left;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+.banner {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.5; /* Untuk membuat gambar transparan */
+}
+
+.banner h1, .banner p, .banner .btn {
+    position: relative;
+    z-index: 1;
+}
+
+.menu-item {
+    text-align: center;
+    margin: 20px;
+}
+
+.menu-item img {
+    width: 100%;  /* Gambar akan menyesuaikan dengan lebar kontainer */
+    max-width: 300px; /* Lebar maksimum gambar */
+    height: auto;  /* Menjaga rasio aspek gambar */
+    border-radius: 10px; /* Membuat sudut gambar membulat */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Menambahkan bayangan untuk efek elegan */
+}
+
+.menu-item h3 {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.menu-item p {
+    font-size: 1em;
+    color: #666;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    .menu-item img {
+        max-width: 100%; /* Gambar akan memenuhi lebar layar di perangkat kecil */
+    }
+}
+
+.service-item {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9; /* Warna latar belakang untuk item layanan */
+    border-radius: 10px; /* Membuat sudut kotak membulat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan */
+    transition: transform 0.3s ease; /* Efek transisi saat hover */
+}
+
+.service-item:hover {
+    transform: translateY(-10px); /* Efek mengangkat saat di-hover */
+}
+
+.service-item img {
+    width: 100%;  /* Mengatur gambar agar memenuhi lebar kontainer */
+    max-width: 150px; /* Lebar maksimum gambar */
+    height: auto;  /* Menjaga rasio aspek gambar */
+    margin-bottom: 15px; /* Jarak antara gambar dan teks */
+    border-radius: 50%; /* Membuat gambar menjadi lingkaran (opsional) */
+}
+
+.service-item h3 {
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #333; /* Warna teks */
+}
+
+.service-item p {
+    font-size: 1em;
+    color: #777; /* Warna teks untuk deskripsi */
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap; /* Agar item bisa membungkus ke baris baru jika tidak cukup ruang */
+    justify-content: space-around; /* Menyebarkan item secara merata */
+    gap: 20px; /* Jarak antar item layanan */
+}
+
+.service-item {
+    flex: 1 1 calc(33.333% - 40px); /* Setiap item mengisi sepertiga lebar kontainer dengan margin */
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .service-item {
+        flex: 1 1 calc(50% - 40px); /* Pada layar lebih kecil, item mengisi setengah lebar kontainer */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-item {
+        flex: 1 1 100%; /* Pada layar sangat kecil, item mengisi lebar penuh kontainer */
+    }
+}
+
+.logo {
+    width: 100px; /* Ukuran lebar logo  */
+    height: 100 px; /* Tinggi logo  */
+    border-radius: 50%; /* Membuat logo berbentuk bulat */
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+}
+
